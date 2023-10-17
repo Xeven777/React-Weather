@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  min-height: 100vh;
+  color: aliceblue;
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0.4)
+  );
+  user-select: none;
+}
+.header {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 1.2rem auto;
+}
+body {
+  overflow: hidden;
+}
+.App {
+  background: url(/public/warm.avif) no-repeat center center/cover;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  width: 100%;
+  transition: 1s ease-in-out;
+}
+
+.App.cold {
+  background: url(/public/cold.avif) no-repeat center center/cover;
+}
+.App.spring {
+  background: url(/public/spring.avif) no-repeat center center/cover;
+}
+.App.rain {
+  background: url(/public/rain.avif) no-repeat center center/cover;
+}
+.App.cloud {
+  background: url(/public/cloudy.avif) no-repeat center center/cover;
+}
+
+.searchBox {
+  width: clamp(280px, 45vw, 650px);
+  margin: 0 auto 40px;
+}
+.searchBar {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(204, 204, 204, 0.171);
+  border-radius: 1rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+.searchBar::placeholder {
+  font-family: "Montserrat", sans-serif;
+  color: rgba(238, 232, 224, 0.692);
+}
+.searchBar:focus {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+.locationBox .location {
+  font-size: clamp(2.5rem, 3.5vw, 3.6rem);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.date {
+  font-size: clamp(1rem, 1.6vw, 2rem);
+  margin: 1rem;
+  font-style: italic;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.temp {
+  display: inline-block;
+  font-size: clamp(5rem, 5.5vw, 5.7rem);
+  background: #c9c9c93f;
+  backdrop-filter: blur(3px);
+  padding: 0.6rem 1.5rem;
+  border-radius: 1rem;
+  margin: 1rem auto;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 6px rgba(94, 94, 94, 0.2);
+}
+.weather {
+  font-size: 3rem;
+  margin: 1.4rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 0 0 10px #dadada65;
+  cursor: crosshair;
+  letter-spacing: 1.3px;
+  font-size: larger;
+}
